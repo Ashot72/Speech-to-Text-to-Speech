@@ -5,7 +5,7 @@ I built a Node.js app where you can ask questions to ChatGPT using voice prompts
 Voice to Text: I turn an audio into text using [Whisper](https://openai.com/research/whisper) which is an OpenAI Speech Recognition Model that turns audio 
 into text with up to 99% accuracy. Whisper is a speech transcription system form the creators of ChatGPT. Anyone can use it, and it is completely free. The system is trained on 680 000 hours of speech data from the network and recognizes 99 languages.
 
-Generating Answers: To generate word-by-word answers and display them, we utilize the LangChain streaming API [LangChain](https://js.langchain.com/). This API allows
+Generating Answers: To generate word-by-word answers and display them, we utilize the [LangChain](https://js.langchain.com/) streaming API . This API allows
 us to receive words in real-time as they are generated. Additionally, we use Node.js Socket.IO, which enables bidirectional and event-based communication between the client and server.
 
 Text to Voice: I use [gTTS.js](https://www.npmjs.com/package/gtts) which is Google Text to Speech JavaScript library originally written in Phyton.
