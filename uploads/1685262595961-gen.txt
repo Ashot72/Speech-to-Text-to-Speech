@@ -1,0 +1,9 @@
+
+
+Lightning Tools: Lightning Tools is a set of software tools and components that enable organizations to quickly and easily build custom SharePoint solutions. These tools empower organizations to integrate their existing information systems with SharePoint, and to design and deploy powerful applications to extend the value of SharePoint.
+
+Social Square: Social Square is a cloud-based platform that helps organizations to create an engaging online presence. It allows organizations to create public profile pages, create custom communities, and manage content. It helps organizations to build relationships with customers, partners, and other stakeholders, and to increase engagement and visibility.
+
+DeliverPoint: DeliverPoint is a SharePoint governance and automation platform. It allows organizations to define governance policies, audit their SharePoint environment, and automate processes to maintain compliance. DeliverPoint helps organizations to manage their SharePoint environment more effectively and to ensure that their SharePoint environment is in compliance with organizational policies.
+
+These are just a few examples of the products offered by Lightning Tools. They offer a range of products that can help organizations to extend the value of their SharePoint environment and to create powerful applications.
