@@ -1,0 +1,155 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:22.0pt;line-height:107%'>Speech to Text to Speech</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:22.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>GitHub
+Repository: <a href="https://github.com/Ashot72/Speech-to-Text-to-Speech"
+target="_blank">https://github.com/Ashot72/Speech-to-Text-to-Speech</a></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Video Link: <a
+href="https://youtu.be/PZWEQjuDxog" target="_blank">https://youtu.be/PZWEQjuDxog</a></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I built a
+Node.js app where you can ask questions to ChatGPT using voice prompts, see the
+ChatGPT-like word-by-word answer, and then listen to the responses with voice.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Voice to Text:</span></i><span
+style='font-size:14.0pt;line-height:107%'> I turn an audio into text using
+Whisper <a href="https://openai.com/research/whisper" target="_blank">https://openai.com/research/whisper</a>
+which is an OpenAI Speech Recognition Model that turns audio </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>into text
+with up to 99% accuracy. Whisper is a speech transcription system form the
+creators of ChatGPT. Anyone can use it, and it is completely free. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The system
+is trained on 680 000 hours of speech data from the network and recognizes 99
+languages.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Generating
+Answers</span></i><span style='font-size:14.0pt;line-height:107%'>: To generate
+word-by-word answers and display them, we utilize the LangChain streaming API <a
+href="https://js.langchain.com/" target="_blank">https://js.langchain.com/</a>.
+This API allows</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>us to
+receive words in real-time as they are generated. Additionally, we use Node.js
+Socket.IO, which enables bidirectional and event-based communication between</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>the client
+and server.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Text to
+Voice</span></i><span style='font-size:14.0pt;line-height:107%'>: I use gTTS.js
+<a href="https://www.npmjs.com/package/gtts" target="_blank">https://www.npmjs.com/package/gtts</a>
+which is <i>Google Text to Speech</i> JavaScript library originally written in
+Phyton.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1288 height=608 id="Picture 1"
+src="doc_files/image001.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Once you
+record your voice prompt and click on the Save button, the app generates an
+.mp3 file, and Whisper extracts the text from the audio.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1294 height=706 id="Picture 2"
+src="doc_files/image002.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Next, we
+pass the extracted prompt to LangChain to get words streamed back as they are
+generated and we display them to the client using Socket.IO.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1301 height=630 id="Picture 3"
+src="doc_files/image003.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 3</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Once the
+response is generated, we create an audio file based on that response so the
+user can listen to the answer.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=751 height=837 id="Picture 4"
+src="doc_files/image004.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 4</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You may
+notice that we used two instances of OpenAI. The LangChain OpenAI uses
+streaming, which we need, but the OpenAIApi does not support it. Additionally,
+the</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>OpenAiApi
+supports Whisper transcription, but LangChain OpenAI does not. Therefore, we
+use two instances with the same key located in the .env file. </span></p>
+
+</div>
+
+</body>
+
+</html>
